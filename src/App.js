@@ -9,9 +9,9 @@ import ProductList from './components/ProductList/ProductList'
 const App = () => {
   const {tg, onToggleButton} = useTelegram
 
-  useEffect(() => {
-    tg.ready()
-  }, []) // приложение инициализировалось
+  // useEffect(() => {
+  //   tg.ready()
+  // }, []) // приложение инициализировалось
 
   return (
     <div className='App'>
