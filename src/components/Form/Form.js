@@ -3,6 +3,7 @@ import './Form.css'
 import {useTelegram} from '../../hooks/useTelegram'
 
 const Form = () => {
+  const [name, setName] = useState('')
   const [country, setCountry] = useState('')
   const [street, setStreet] = useState('')
   const [subject, setSubject] = useState('physical')
@@ -38,6 +39,10 @@ const Form = () => {
     }
   }, [country, street])
 
+  const onChangeName = (e) => {
+    setName(e.target.value)
+  }
+
   const onChangeCountry = (e) => {
     setCountry(e.target.value)
   }
@@ -53,6 +58,13 @@ const Form = () => {
   return (
     <form className='form'>
         <h3>Введите ваши данные</h3>
+        <input
+            className='input'
+            type='text'
+            placeholder='Имя'
+            value={name}
+            onChange={onChangeName}
+        />
         <input
             className='input'
             type='text'
