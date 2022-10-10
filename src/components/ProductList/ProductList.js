@@ -1,6 +1,7 @@
 import './ProductList.css'
 import ProductItem from '../ProductItem/ProductItem'
 import { useTelegram } from '../../hooks/useTelegram'
+import {useCallback, useEffect, useState} from 'react'
 
 const products = [
   {id: '1', title: 'Ветчина и грибы', price: 32, url: 'https://cdn.dodostatic.net/static/Img/Products/aadc8d5d9dd24e77935f554689ab44e6_584x584.png', description: 'Томатный соус, моцарелла, ветчина, шампиньоны'},
