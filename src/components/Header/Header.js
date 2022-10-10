@@ -1,16 +1,15 @@
-const Header = () => {
-  const tg = window.Telegram.WebApp
+import './Header.css'
+import { useTelegram } from '../../hooks/useTelegram'
 
-  const onClose = () => {
-    tg.close()
-  }
+const Header = () => {
+  const {user, onClose } = useTelegram
 
   return (
     <header className='header'>
       <button onClick={onClose}>Закрыть</button>
 
       <span className='username'>
-        {tg.initDataUnsafe?.user.username}
+        {user.username}
       </span>
     </header>
   )
