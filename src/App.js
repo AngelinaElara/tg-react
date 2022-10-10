@@ -1,22 +1,16 @@
 import { useEffect } from 'react'
 import './App.css'
 
-const tg = window.Telegram.WebApp
-
 const App = () => {
+  const tg = window.Telegram.WebApp
 
   useEffect(() => {
     tg.ready()
   }, []) // приложение инициализировалось
 
-
-  const onClose = () => {
-    tg.close()
-  }
-
   return (
     <div className='App'>
-      <button onClick={onClose}>Закрыть</button>
+      
     </div>
   )
 }
