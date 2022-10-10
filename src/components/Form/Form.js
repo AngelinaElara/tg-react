@@ -38,7 +38,7 @@ const Form = () => {
     } else {
       tg.MainButton.show()
     }
-  }, [country, street])
+  }, [name, country, street])
 
   const onChangeName = (e) => {
     setName(e.target.value)
@@ -57,7 +57,7 @@ const Form = () => {
   }
 
   return (
-    <form className='form'>
+    <div className='form'>
         <h3>Введите ваши данные</h3>
         <input
             className='input'
@@ -84,7 +84,7 @@ const Form = () => {
             <option value={'physical'}>Физ. лицо</option>
             <option value={'legal'}>Юр. лицо</option>
         </select>
-    </form>
+    </div>
   )
 }
 
