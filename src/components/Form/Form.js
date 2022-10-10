@@ -11,6 +11,7 @@ const Form = () => {
 
   const onSendData = useCallback(() => {
     const data = {
+      name,
       country,
       street,
       subject
@@ -32,7 +33,7 @@ const Form = () => {
   }, [])
 
   useEffect(() => {
-    if(!street || !country) {
+    if(!name || !street || !country) {
       tg.MainButton.hide() // не даем отправить данные, если не заполнено
     } else {
       tg.MainButton.show()
